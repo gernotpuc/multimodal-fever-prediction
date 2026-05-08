@@ -33,10 +33,10 @@ By integrating structured electronic health record (EHR) data, longitudinal temp
 
 ## Repository Structure
 ```text
-├── data-processing/          # Feature extraction and preprocessing pipelines
-├── training-validation/      # Model training and evaluation
-├── clinican-validation-study/      # Model training and evaluation
-└── requirements.txt          # Python dependencies
+├── data-processing/            # Feature extraction and preprocessing pipelines
+├── training-validation/        # Model training and evaluation
+├── clinican-validation-study/  # Model training and evaluation
+└── requirements.txt            # Python dependencies
 ```
 
 
