@@ -20,7 +20,7 @@ By integrating structured electronic health record (EHR) data, longitudinal temp
 - **Validation Strategy:**  
   - Repeated nested 5-fold cross-validation 
   - Temporal holdout cohort  
-  - External validation: Pooled regional hospitals and MIMIC-IV  
+  - External validation: Pooled regional hospitals and MIMIC-IV ICU  
   - Clinician validation study involving 15 clinicians
 - **Inclusion Criteria:**  
   - Adult oncology/hematology patients 
