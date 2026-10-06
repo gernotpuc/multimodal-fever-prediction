@@ -1,0 +1,40 @@
+Expected output for the bundled synthetic demo
+=============================================
+
+Command:
+  python demo/run_demo.py
+
+The exact Optuna log lines may differ in formatting across package versions, but a successful run should end with a message similar to:
+
+  Demo completed successfully.
+  Case-level predictions: 120 encounters
+  Runtime: approximately 5-15 seconds on a modern CPU
+  Primary output: demo/demo_output/nested_cv_predictions_case_level_pooled.csv
+  Metric summary: demo/demo_output/nested_cv_metrics_pooled.csv
+
+With the pinned synthetic example, seed=42, 3 outer folds, 2 inner folds, 2 Optuna trials per outer fold, and 100 bootstrap iterations, the reference run produced approximately:
+
+  accuracy:    0.633 (95% CI 0.550-0.704)
+  specificity: 0.600 (95% CI 0.510-0.687)
+  sensitivity: 0.737 (95% CI 0.547-0.895)
+  AUROC:       0.677 (95% CI 0.578-0.782)
+  AUPRC:       0.380 (95% CI 0.259-0.514)
+
+These values are demonstration-only and have no clinical interpretation. Small numerical differences can occur across software versions/platforms.
+
+A successful run creates at least the following files in demo/demo_output/:
+
+  nested_cv_predictions_all_repeats.csv
+  nested_cv_predictions_case_level_pooled.csv
+  nested_cv_metrics_pooled.csv
+  nested_cv_metrics_per_repeat.csv
+  nested_cv_metric_variance_across_repeats.csv
+  nested_cv_calibration_pooled.csv
+  fold_thresholds.csv
+  fold_best_params.csv
+  roc_curve_pooled_repeats.png
+  precision_recall_curve_pooled_repeats.png
+  calibration_curve_pooled_repeats.png
+  run_metadata.json
+
+Additional false-positive/false-negative tables are also written by the released pipeline.
